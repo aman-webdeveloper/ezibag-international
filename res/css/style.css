@@ -37,17 +37,19 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background-color: var(--white-color);
 }
 
 nav .logo .title {
-  margin-left: 3.5rem;
-  position: fixed;
-  top: 5px;
+  position: relative;
+  bottom: 9px;
+  left: 43px;
 }
 
 nav .logo .title-suffix-pre {
@@ -75,6 +77,7 @@ nav ul {
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
+  flex-wrap: wrap;
   width: 60rem;
   height: 3rem;
 }
@@ -85,10 +88,9 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-}
-
-nav ul li:hover {
-  box-shadow: 0px 2px 0px var(--primary-color);
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 18rem;
 }
 
 nav ul li a {
@@ -100,6 +102,10 @@ nav ul li a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+nav ul li a:hover {
+  box-shadow: 0px 2px 0px var(--primary-color);
 }
 
 nav ul li a span{
@@ -147,7 +153,7 @@ nav .searchInput input {
   padding: 6px;
   font-size: 1rem;
   border: 0;
-  border-radius: 8px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 nav .searchInput button {
@@ -155,7 +161,7 @@ nav .searchInput button {
   padding: 0;
   margin: 0;
   border: none;
-  border-radius: 8px;
+  border-radius: 0px 8px 8px 0px;
   background-color: var(--white-color);
   width: 20%;
 }
